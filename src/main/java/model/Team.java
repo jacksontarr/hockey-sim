@@ -5,7 +5,7 @@ import java.util.TreeMap;
 public class Team {
     private int id;
     private String name;
-    private TreeMap<Integer, Player> roster;
+    private TreeMap<Integer, Skater> roster;
 
     public Team(int id, String name) {
         this.id = id;
@@ -21,7 +21,7 @@ public class Team {
         return name;
     }
 
-    public TreeMap<Integer, Player> getRoster() {
+    public TreeMap<Integer, Skater> getRoster() {
         return roster;
     }
 
@@ -29,11 +29,11 @@ public class Team {
         this.name = name;
     }
 
-    public void addPlayer(Player player) {
+    public void addPlayer(Skater player) {
         roster.put(player.getID(), player);
     }
 
-    public void removePlayer(Player player) {
+    public void removePlayer(Skater player) {
         roster.remove(player.getID());
     }
 }
